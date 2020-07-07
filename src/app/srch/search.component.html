@@ -1,0 +1,29 @@
+
+   
+    <br><br>
+    <div class="row">
+        <span class="col-md-1"></span>
+        <div class="col-md-6 col-8">
+          <input type="text" class="form-control" [(ngModel)]="srch" placeholder="Image name" >
+  
+        </div>
+        <span class="col-md-2 col-2">
+            <button class="btn btn-default" (click)="search()">Search</button>
+        </span>
+        {{srch}}
+    </div>
+    <br><br>
+   
+    <div class="row">
+       <div>
+           <div class="row" *ngFor="let rw of  srchResults">
+               <div *ngFor="let cw of rw">
+                   <span class="col-md-4">
+                      <img src="{{cw.userImageURL}}" class="img-thumbnail" alt="pixabay image">
+                   </span>
+               </div>
+           </div>
+       </div>
+  
+    </div>
+  
